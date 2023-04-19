@@ -1,0 +1,11 @@
+
+n = 15;
+x = linspace(-5, 5, n+1);
+y = 1./(1+x.^2);
+p = polyfit(x, y, n);
+
+z = 5*cos(((2*(1:n+1)-1)*pi)/(2*(n+1)));
+w = 1./(1+z.^2);
+q = polyfit(z, w, n);
+hold on
+plot(y,
